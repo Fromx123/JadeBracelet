@@ -1,0 +1,47 @@
+# 方块映射：新版命名空间ID -> 1.5.2 数字ID
+BLOCK_NEW_TO_OLD = {
+    "minecraft:air": 0,
+    "minecraft:stone": 1,
+    "minecraft:grass_block": 2,
+    "minecraft:dirt": 3,
+    "minecraft:cobblestone": 4,
+    "minecraft:oak_planks": 5,
+    "minecraft:oak_sapling": 6,
+    "minecraft:bedrock": 7,
+    "minecraft:water": 8,
+    "minecraft:lava": 10,
+    "minecraft:sand": 12,
+    "minecraft:gravel": 13,
+    "minecraft:gold_ore": 14,
+    "minecraft:iron_ore": 15,
+    "minecraft:coal_ore": 16,
+    "minecraft:oak_log": 17,
+    "minecraft:oak_leaves": 18,
+    "minecraft:glass": 20,
+    "minecraft:lapis_ore": 21,
+    "minecraft:lapis_block": 22,
+    "minecraft:sandstone": 24,
+    "minecraft:wool": 35,
+    "minecraft:gold_block": 41,
+    "minecraft:iron_block": 42,
+    "minecraft:obsidian": 49,
+    "minecraft:diamond_ore": 56,
+    "minecraft:diamond_block": 57,
+    "minecraft:crafting_table": 58,
+    "minecraft:furnace": 61,
+    "minecraft:ice": 79,
+    "minecraft:snow_block": 80,
+    "minecraft:cactus": 81,
+    "minecraft:clay": 82,
+    "minecraft:netherrack": 87,
+    "minecraft:soul_sand": 88,
+    "minecraft:glowstone": 89,
+    "minecraft:end_stone": 121,
+    "minecraft:redstone_block": 152,
+    "minecraft:slime_block": 165,
+}
+
+# 反向映射
+BLOCK_OLD_TO_NEW = {v: k for k, v in BLOCK_NEW_TO_OLD.items()}
+DEFAULT_BLOCK_OLD = 1
+DEFAULT_BLOCK_NEW = "minecraft:stone"
