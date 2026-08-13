@@ -1,0 +1,8 @@
+{
+  "proxy_host": "::",
+  "proxy_port": 25566,
+  "server_host": "127.0.0.1",
+  "server_port": 25565,
+  "server_motd": "A JadeBracelet 1.5.2 Server",
+  "max_players": 20
+}
