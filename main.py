@@ -417,10 +417,10 @@ def main():
     server.listen(5)
 
     print("=" * 50)
-    print("1.5.2 <-> Paper 26.2 协议转换代理")
+    print("JadeBracelet 1.5.2 <-> 26.2 协议转换代理")
     print(f"代理监听: [{PROXY_HOST}]:{PROXY_PORT} (IPv4/IPv6 双栈)")
     print(f"后端服务: {SERVER_HOST}:{SERVER_PORT}")
-    print(f"协议版本: 1.5.2(v{PROTOCOL_152}) <-> 26.2(v{PROTOCOL_MODERN})")
+    print(f"协议版本: 1.5.2({PROTOCOL_152}) <-> 26.2({PROTOCOL_MODERN})")
     print("=" * 50)
     print("等待客户端连接...\n")
 
