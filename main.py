@@ -4,23 +4,26 @@ import json
 import zlib
 import uuid
 import traceback
-from protocol_utils import PacketBuffer
+from protocol import PacketBuffer
 from mappings import BLOCK_NEW_TO_OLD, BLOCK_OLD_TO_NEW, DEFAULT_BLOCK_OLD
 
-# ========== 配置 ==========
-PROXY_HOST = "::"
-PROXY_PORT = 25566
-SERVER_HOST = "127.0.0.1"
-SERVER_PORT = 25565
-
+# ========== 内部固定常量，不允许外部配置 ==========
 PROTOCOL_152 = 61
 PROTOCOL_MODERN = 776
-SERVER_MOTD = "Fromx 1.5.2"
-MAX_PLAYERS = 100
-
 STATE_HANDSHAKE = 0
 STATE_LOGIN = 2
 STATE_PLAY = 3
+
+# ========== 加载JSON配置 ==========
+with open("config.json", "r", encoding="utf-8") as f:
+    cfg = json.load(f)
+
+PROXY_HOST = cfg["proxy_host"]
+PROXY_PORT = cfg["proxy_port"]
+SERVER_HOST = cfg["server_host"]
+SERVER_PORT = cfg["server_port"]
+SERVER_MOTD = cfg["server_motd"]
+MAX_PLAYERS = cfg["max_players"]
 
 # ========== 工具函数 ==========
 def json_chat_to_legacy(text_json: str) -> str:
