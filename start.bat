@@ -1,3 +1,3 @@
 @echo off
-python proxy.py
+python main.py
 pause
